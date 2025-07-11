@@ -32,7 +32,7 @@ function MyTodo({ item, markAsCompleted, deleteFromToDoList }) {
         </label>
       </span>
 
-      <button className="btn btn-danger border btn-sm me-2 px-3 text-dark text-decoration-none shadow-sm" onClick={() => {deleteFromToDoList(item)}}>
+      <button className="btn btn-link border btn-sm me-2 px-3 text-dark text-decoration-none shadow-sm" onClick={() => {deleteFromToDoList(item)}}>
         <i className="fas fa-trash-alt text-danger"></i>
       </button>
     </li>
