@@ -11,6 +11,7 @@ import ToDo from './components/ToDo';
 import Help from './components/Help';
 import Login from './components/login_registor/Login';
 import Registor from './components/login_registor/Registor';
+import { Signin } from './components/login_registor/Signin';
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
           <Route path="/todo" element={<ToDo />} />
           <Route path="/help" element={<Help />} />
           <Route path="/login" element={<Login />} />
+          <Route path="/signin" element={<Signin />} />
           <Route path="/register" element={<Registor />} />
           
           {/* Catch-all route for 404 Not Found */}

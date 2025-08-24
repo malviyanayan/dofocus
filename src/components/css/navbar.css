@@ -1,0 +1,77 @@
+/* Navbar height fix */
+.navbar {
+  height: 15vh !important;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1rem;
+}
+
+/* Brand/logo */
+.navbar-brand {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #ffc107 !important;
+}
+
+/* Navbar links */
+.navbar-nav {
+  gap: 0.8rem; /* spacing between links */
+}
+
+.navbar-nav .nav-link {
+  color: #bbb !important;
+  font-weight: 500;
+  padding: 0.6rem 1rem;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+/* Common style for hover + active */
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+  color: #fff !important;
+  background: rgba(255, 193, 7, 0.18); /* soft yellow bg */
+}
+
+/* Sign In button */
+.btn-login {
+  border: 1px solid #ffc107;
+  color: #ffc107;
+  background: transparent;
+  font-weight: 500;
+  padding: 0.45rem 1rem;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.btn-login:hover {
+  background: #ffc107;
+  color: #000;
+}
+
+/* Offcanvas custom */
+.custom-offcanvas {
+  width: 220px !important;
+  max-width: 70%;
+  height: 100vh;
+  background-color: #212529;
+  color: white;
+  padding-top: 2rem;
+}
+
+.custom-offcanvas .nav-link {
+  color: #bbb !important;
+  font-size: 1rem;
+  margin: 0.4rem 0;
+  padding: 0.6rem 1rem;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+/* Same hover + active for offcanvas */
+.custom-offcanvas .nav-link:hover,
+.custom-offcanvas .nav-link.active {
+  color: #fff !important;
+  background: rgba(255, 193, 7, 0.18);
+}

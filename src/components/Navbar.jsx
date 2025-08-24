@@ -1,105 +1,96 @@
-import { NavLink } from "react-router-dom";
-import profilePic from "../assets/default_icon.png";
-import GetStarted from "./login_registor/GetStarted";
-import { useState } from "react";
+import React from "react";
+import { NavLink, Link } from "react-router-dom";
+import "./css/navbar.css";
+import "bootstrap/dist/css/bootstrap.min.css";
 
-const Navbar = () => {
-  const [isLoggedIn, setIsLoggedIn] = useState(false); // simulate login
+export default function Navbar() {
+  const navLinks = (
+    <ul className="navbar-nav gap-2">
+      <li className="nav-item">
+        <NavLink className="nav-link" to="/" end>
+          <i className="fas fa-home me-2"></i> Home
+        </NavLink>
+      </li>
+      <li className="nav-item">
+        <NavLink className="nav-link" to="/notes">
+          <i className="fas fa-sticky-note me-2"></i> Notes
+        </NavLink>
+      </li>
+      <li className="nav-item">
+        <NavLink className="nav-link" to="/todo">
+          <i className="fas fa-tasks me-2"></i> To-Do
+        </NavLink>
+      </li>
+      <li className="nav-item">
+        <NavLink className="nav-link" to="/streak">
+          <i className="fas fa-fire me-2"></i> Streak
+        </NavLink>
+      </li>
+      <li className="nav-item">
+        <NavLink className="nav-link" to="/help">
+          <i className="fas fa-question-circle me-2"></i> Help
+        </NavLink>
+      </li>
+    </ul>
+  );
 
   return (
-    <nav className="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm px-3">
-      <div className="container-fluid">
-        <NavLink className="navbar-brand d-flex align-items-center gap-2" to="/">
-          <i className="fa-solid fa-bolt text-warning"></i>
-          <span className="fw-semibold fs-4">DoFocus</span>
-        </NavLink>
+    <nav className="navbar navbar-expand-lg navbar-dark bg-dark px-3">
+      {/* Brand */}
+      <Link className="navbar-brand d-flex align-items-center" to="/">
+        <i className="fas fa-bolt me-2"></i> DoFocus
+      </Link>
 
-        <button
-          className="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNavAltMarkup"
-          aria-controls="navbarNavAltMarkup"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span className="navbar-toggler-icon"></span>
-        </button>
+      {/* Toggler for mobile */}
+      <button
+        className="navbar-toggler d-lg-none"
+        type="button"
+        data-bs-toggle="offcanvas"
+        data-bs-target="#offcanvasNavbar"
+        aria-controls="offcanvasNavbar"
+      >
+        <span className="navbar-toggler-icon"></span>
+      </button>
 
-        <div
-          className="collapse navbar-collapse justify-content-end mt-2 mt-lg-0 pt-2 pt-lg-0"
-          id="navbarNavAltMarkup"
-          style={{
-            backgroundColor: "#212529",
-            borderTop: "1px solid #343a40",
-            zIndex: 99,
-          }}
-        >
-          <div className="navbar-nav align-items-lg-center gap-2 gap-lg-3 w-100">
-            <NavLink className="nav-link w-100 text-center text-lg-start" to="/">
-              <i className="fa-solid fa-house me-1"></i>Home
-            </NavLink>
-            <NavLink className="nav-link w-100 text-center text-lg-start" to="/notes">
-              <i className="fa-solid fa-note-sticky me-1"></i>Notes
-            </NavLink>
-            <NavLink className="nav-link w-100 text-center text-lg-start" to="/streak">
-              <i className="fa-solid fa-fire me-1"></i>Streak
-            </NavLink>
-            <NavLink className="nav-link w-100 text-center text-lg-start" to="/todo">
-              <i className="fa-solid fa-list-check me-1"></i>Todo
-            </NavLink>
-            <NavLink className="nav-link w-100 text-center text-lg-start" to="/help">
-              <i className="fa-solid fa-circle-question me-1"></i>Help
-            </NavLink>
+      {/* Desktop links */}
+      <div className="collapse navbar-collapse justify-content-center d-none d-lg-flex">
+        {navLinks}
+      </div>
 
-            {isLoggedIn ? (
-              <div className="nav-item dropdown w-100 text-center text-lg-start">
-                <a
-                  className="nav-link dropdown-toggle d-flex align-items-center justify-content-center justify-content-lg-start"
-                  href="#"
-                  id="userDropdown"
-                  role="button"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
-                >
-                  <img
-                    src={profilePic}
-                    alt="Profile"
-                    className="rounded-circle border border-light"
-                    style={{ width: "35px", height: "35px", objectFit: "cover" }}
-                  />
-                </a>
-                <ul className="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdown">
-                  <li>
-                    <a className="dropdown-item" href="#">
-                      <i className="fas fa-user me-2"></i>Profile
-                    </a>
-                  </li>
-                  <li>
-                    <a className="dropdown-item" href="#">
-                      <i className="fas fa-cog me-2"></i>Settings
-                    </a>
-                  </li>
-                  <li>
-                    <hr className="dropdown-divider" />
-                  </li>
-                  <li>
-                    <a className="dropdown-item" href="#">
-                      <i className="fas fa-sign-out-alt me-2"></i>Logout
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            ) : (
-              <div className="w-100 d-flex justify-content-center mt-3">
-                <GetStarted />
-              </div>
-            )}
+      {/* Right side button */}
+      <div className="d-none d-lg-flex align-items-center">
+        <Link className="btn btn-login" to="/signin">
+          <i className="fas fa-sign-in-alt me-2"></i> Sign In
+        </Link>
+      </div>
+
+      {/* Offcanvas for mobile */}
+      <div
+        className="offcanvas offcanvas-end custom-offcanvas d-lg-none"
+        tabIndex="-1"
+        id="offcanvasNavbar"
+        aria-labelledby="offcanvasNavbarLabel"
+      >
+        <div className="offcanvas-header">
+          <h5 className="offcanvas-title" id="offcanvasNavbarLabel">
+            <i className="fas fa-bars me-2"></i> Menu
+          </h5>
+          <button
+            type="button"
+            className="btn-close btn-close-white"
+            data-bs-dismiss="offcanvas"
+            aria-label="Close"
+          ></button>
+        </div>
+        <div className="offcanvas-body">
+          {navLinks}
+          <div className="mt-4">
+            <Link className="btn btn-login w-100" to="/signin">
+              <i className="fas fa-sign-in-alt me-2"></i> Sign In
+            </Link>
           </div>
         </div>
       </div>
     </nav>
   );
-};
-
-export default Navbar;
+}
