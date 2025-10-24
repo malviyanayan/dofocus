@@ -29,14 +29,11 @@ Here are some screenshots of the website:
 
 | Screenshot                                         | Description                             |
 | -------------------------------------------------- | --------------------------------------- |
-| ![Home Page](readme_images/image5.png)             | Home Page                               |
-| ![Sign In & Register](readme_images/image6.png)    | Sign In & Register                      |
-| ![Courses Section](readme_images/image7.png)       | Courses Section                         |
-| ![Course Details](readme_images/image8.png)        | Particular Course (for Purchase)        |
-| ![Course Preview](readme_images/image9.png)        | Course Preview (with Purchase Button)   |
-| ![Profile Section](readme_images/image10.png)      | Profile Section                         |
-| ![Trainer Section](readme_images/image11.png)      | Trainer Section (Upload & Sell Courses) |
-| ![View Trainer Courses](readme_images/image12.png) | View Trainer Courses (Edit)             |
+| ![Home Page](readme_images/home.png)             | Home Page                               |
+| ![Sign In & Register](readme_images/signin_register.png)    | Sign In & Register                      |
+| ![Courses Section](readme_images/notes.png)       | Notes Page                         |
+| ![Course Details](readme_images/todos.png)        |Todos Page     |
+| ![Course Preview](readme_images/streak.png)        | Maintain Daily Streak Section   |
 
 ---
 
@@ -51,45 +48,6 @@ Here are some screenshots of the website:
 
 ---
 
-## 🗂️ Folder Structure
-
-```
-Root Folder (App)/
-├── static/
-│    ├── css/
-│    │    └── * All CSS files *
-│    ├── js/
-│    │    └── * All JS files *
-│    └── media/
-│         ├── images/
-│         │    └── * All images *
-│         └── videos/
-│              └── * All videos *
-├── WEB-INF/
-│    ├── src/
-│    │    ├── controllers/
-│    │    │    └── * Java controller classes *
-│    │    ├── filters/
-│    │    │    └── * Java filter classes *
-│    │    ├── models/
-│    │    │    └── * Java model classes *
-│    │    ├── utils/
-│    │    │    └── * Java utility classes *
-│    │    └── listeners/
-│    │         └── * Java listener classes *
-│    ├── lib/
-│    │    └── * All required JAR libraries *
-│    ├── pages/
-│    │    └── * All JSP files *
-│    └── uploads/
-│         └── * User-specific folders (named by email) containing user data *
-├── queries.db
-│    └── * SQLite database file for creating tables and sample data *
-└── readme-image/
-     └── * All images used in README files *
-
-```
-
 # ⚙️ How To Run
 
 ## Steps to Run This Application (Vite)
@@ -97,7 +55,7 @@ Root Folder (App)/
 1. **Clone the Repository**  
    Open your terminal and run:
    ```bash
-   git clone <repository-url>
+   git clone https://github.com/malviyanayan/dofocus.git
    ```
 
 ```
