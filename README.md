@@ -27,13 +27,13 @@ It emphasizes a **clean, intuitive interface** and **secure authentication** to 
 
 Here are some screenshots of the website:
 
-| Screenshot                                         | Description                             |
-| -------------------------------------------------- | --------------------------------------- |
-| ![Home Page](readme_images/home.png)             | Home Page                               |
-| ![Sign In & Register](readme_images/signin_register.png)    | Sign In & Register                      |
-| ![Courses Section](readme_images/notes.png)       | Notes Page                         |
-| ![Course Details](readme_images/todos.png)        |Todos Page     |
-| ![Course Preview](readme_images/streak.png)        | Maintain Daily Streak Section   |
+| Screenshot                                               | Description                   |
+| -------------------------------------------------------- | ----------------------------- |
+| ![Home Page](readme_images/home.png)                     | Home Page                     |
+| ![Sign In & Register](readme_images/signin_register.png) | Sign In & Register            |
+| ![Courses Section](readme_images/notes.png)              | Notes Page                    |
+| ![Course Details](readme_images/todos.png)               | Todos Page                    |
+| ![Course Preview](readme_images/streak.png)              | Maintain Daily Streak Section |
 
 ---
 
@@ -52,12 +52,28 @@ Here are some screenshots of the website:
 
 ## Steps to Run This Application (Vite)
 
-1. **Clone the Repository**  
-   Open your terminal and run:
-   ```bash
-   git clone https://github.com/malviyanayan/dofocus.git
-   ```
+1. **Clone the Repository**
 
+```bash
+ git clone https://github.com/malviyanayan/dofocus.git
+ cd dofocus
 ```
 
+2. **Install Dependencies**
+
+```bash
+npm install
+```
+
+3. **Start the Development Server**
+
+```bash
+npm run dev
+```
+
+4. **Open in Browser**
+   Go to the URL shown in your terminal (usually:
+
+```bash
+http://localhost:5173
 ```
