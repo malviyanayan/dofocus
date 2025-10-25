@@ -10,6 +10,14 @@ A productivity web app for **self progress monitoring**, task tracking, and goal
 
 ---
 
+> 📝 **Note:**  
+> This project is still under development. Both the **frontend** and **backend** are in progress — it’s **not a completed project yet**.  
+>  
+> 🔗 **Frontend Live Link:** [https://dofocus.netlify.app/](https://dofocus.netlify.app/)  
+> 🗂️ **Backend Repository:** [https://github.com/malviyanayan/dofocus_backend](https://github.com/malviyanayan/dofocus_backend)
+
+---
+
 ## 📌 About the Project
 
 DoFocus is a **React-based productivity application** designed to help users **track tasks, set goals, and monitor their progress** efficiently.  
